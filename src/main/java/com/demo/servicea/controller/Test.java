@@ -1,0 +1,18 @@
+package com.demo.servicea.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Test {
+    Logger logger = LoggerFactory.getLogger(Test.class);
+
+	
+	@GetMapping("/a")
+		public String test() {
+		logger.info("SRVICE A CALL");
+		    return "hello from A";
+		}
+}
